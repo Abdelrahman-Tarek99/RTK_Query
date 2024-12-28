@@ -1,4 +1,4 @@
-import { Card } from "@/components";
+import { Card, Pagination } from "@/components";
 import { useGetPostsQuery } from "@/services/jsonPlaceholderApi";
 import { Post } from "../PostSlug/Post.types";
 import { Link } from "react-router";
@@ -16,6 +16,13 @@ export const Home = () => {
           <Card title={post.title} body={post.body} />
         </Link>
       ))}
+      <Pagination
+        totalItems={PostsData?.length || 0}
+        itemsPerPage={10}
+        currentPage={1}
+        onPageChange={(page) => console.log(page)}
+        onItemsPerPageChange={(itemsPerPage) => console.log(itemsPerPage)}
+      />
     </div>
   );
 };

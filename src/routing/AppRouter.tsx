@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router";
-import { Comments, Home, Layout, PostSlug } from "@/pages";
+import { Comments, Home, Layout, PaginatedPostsPage, PostSlug } from "@/pages";
 import { AppRoutes } from "./AppRoutes";
 
 export const AppRouter = createBrowserRouter([
@@ -18,6 +18,16 @@ export const AppRouter = createBrowserRouter([
       {
         path: AppRoutes.postSlug,
         element: <PostSlug />,
+      },
+
+      {
+        path: AppRoutes.pagination,
+        element: <PaginatedPostsPage />,
+      },
+
+      {
+        path: "*",
+        element: <div>404</div>,
       },
     ],
   },

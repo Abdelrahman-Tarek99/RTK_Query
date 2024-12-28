@@ -3,13 +3,13 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import { RouterProvider } from "react-router";
 import { AppRouter } from "./routing/AppRouter.tsx";
-import { ApiProvider } from "@reduxjs/toolkit/query/react";
-import { jsonPlaceholderApi } from "./services/jsonPlaceholderApi.ts";
+import { store } from "../store.ts";
+import { Provider } from "react-redux";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ApiProvider api={jsonPlaceholderApi}>
+    <Provider store={store}>
       <RouterProvider router={AppRouter} />
-    </ApiProvider>
+    </Provider>
   </StrictMode>
 );
