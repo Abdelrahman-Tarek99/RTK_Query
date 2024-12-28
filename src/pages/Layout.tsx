@@ -27,6 +27,12 @@ export const Layout: React.FC = () => {
             >
               Paginated Posts
             </Link>
+            <Link
+              to={AppRoutes.postEntry}
+              className="px-4 py-2 hover:bg-gray-700 rounded"
+            >
+              Enter Posts
+            </Link>
           </div>
         </div>
       </nav>

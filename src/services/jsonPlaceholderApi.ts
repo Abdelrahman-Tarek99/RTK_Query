@@ -10,7 +10,7 @@ export const jsonPlaceholderApi = createApi({
   refetchOnFocus: true,
   endpoints: (builder) => ({
     // Query to fetch posts
-    getPosts: builder.query<Post[], void>({ query: () => `posts/` }),
+    getPosts: builder.query<Post[], void>({ query: () => `posts` }),
     getPostsById: builder.query({
       query: (id: number) => `posts/${id}`,
     }),

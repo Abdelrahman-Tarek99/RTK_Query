@@ -3,4 +3,5 @@ export const AppRoutes = {
   comments: "/comments",
   postSlug: "/:slug",
   pagination: "/pagination",
+  postEntry: "/post-entry",
 };
